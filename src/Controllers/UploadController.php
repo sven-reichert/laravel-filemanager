@@ -57,7 +57,7 @@ class UploadController extends LfmController
             $this->proceedSingleUpload($file);
         }
 
-        return count($this->errors) > 0 ? $this->errors : parent::$success_response;
+        return count($this->errors) > 0 ? $this->errors : [parent::$success_response];
     }
 
     private function proceedSingleUpload($file)
